@@ -8,7 +8,7 @@ NAMESPACE=default
 VERSION:=$(shell go tool svu next --always)
 CURRENT=$(shell go tool svu current)
 TAG=${DKR}/${APPNAME}:${VERSION}
-CURRENT_TAG=${DKR}/${APPNAME}:${VERSION}
+CURRENT_TAG=${DKR}/${APPNAME}:${CURRENT}
 
 build: 
 	git tag ${VERSION}
